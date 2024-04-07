@@ -1,11 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
     <div>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
-        <div className="container-fluid">
-          <a className="navbar-brand">Full Stack Application</a>
+        <div className="container-fluid ">
+          <Link className="navbar-brand" to="/">
+            Full Stack Application
+          </Link>
           {/* <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
@@ -22,6 +25,13 @@ export default function Navbar() {
               </li>
             </ul>
           </div> */}
+          <Link
+            className="btn btn-outline-success"
+            type="submit"
+            to={"/adduser"}
+          >
+            Add User
+          </Link>
         </div>
       </nav>
     </div>
